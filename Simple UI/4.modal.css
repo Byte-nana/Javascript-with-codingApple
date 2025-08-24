@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  cursor: pointer;
+}
+input {
+  outline: none;
+  border: none;
+}
+/*  */
+.modalOpen {
+  display: block;
+  font-size: 28px;
+  color: #050a30;
+  background-color: #9ceeff;
+  border-radius: 10px;
+  padding: 8px 16px;
+  margin: 24px auto;
+}
+.modalBg {
+  visibility: hidden;
+  width: 100vw;
+  height: 100vh;
+  height: 0%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: #e0e4f0;
+  z-index: 10;
+
+  opacity: 0;
+  transition: all 500ms ease;
+}
+.showModal {
+  visibility: visible;
+  height: 100%;
+  opacity: 1;
+}
+.modalBox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #050a30;
+  width: 350px;
+  height: 400px;
+  border-radius: 24px;
+}
+.modalClose {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  font-size: 16px;
+  color: #050a30;
+  background-color: #9ceeff;
+  border-radius: 50%;
+  padding: 4px;
+}
+#modal__loginForm {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 24px;
+}
+.login__title {
+  text-align: center;
+  font-size: 24px;
+  margin: 0;
+}
+.login__name {
+  text-align: center;
+  font-size: 12px;
+  margin: 12px 0 24px 0;
+}
+.login__input {
+  background-color: #e0e4f0;
+  height: 30px;
+  border-radius: 4px;
+  margin: 12px 8px 16px 8px;
+  color: #050a30;
+  font-size: 16px;
+}
+.form__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#login__checkbox {
+  width: 14px;
+  height: 14px;
+}
+.checkbox__label {
+  font-size: 14px;
+  margin-right: 60px;
+}
+.login__forgetLink {
+  font-size: 14px;
+}
+.signBtn {
+  width: 340px;
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  background-color: #9ceeff;
+  font-size: 16px;
+  font-weight: 600;
+  color: #050a30;
+  border-radius: 20px;
+  padding: 20px;
+}

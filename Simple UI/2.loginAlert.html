@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/basic/Simple UI/2.loginAlert.css" />
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/a5f079a000.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="alertBox">
+      <div class="alert">
+        <span class="text"></span>
+        <button class="deleteAlertBtn btn">
+          <i class="fa-solid fa-x"></i>
+        </button>
+      </div>
+    </div>
+
+    <button class="loginBtn btn">ID</button>
+    <button class="passwordBtn btn">password</button>
+  </body>
+
+  <script>
+    const alertBox = document.querySelector('.alertBox');
+    const alert = document.querySelector('.alert');
+    const text = document.querySelector('.text');
+    const loginBtn = document.querySelector('.loginBtn');
+    const passwordBtn = document.querySelector('.passwordBtn');
+
+    function showAlert(color, content) {
+      alertBox.style.display = 'block';
+      alert.style.backgroundColor = color;
+      text.textContent = content;
+
+      const deleteAlertBtn = document.querySelector('.deleteAlertBtn');
+      deleteAlertBtn.addEventListener('click', () => {
+        alertBox.style.display = 'none';
+      });
+    }
+
+    loginBtn.addEventListener('click', () => {
+      showAlert('lightBlue', 'Please enter your ID');
+    });
+
+    passwordBtn.addEventListener('click', () => {
+      showAlert('lightPink', 'Please enter your password');
+    });
+  </script>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NavBar</title>
+    <link rel="stylesheet" href="/basic/Simple UI/3.navBar.css" />
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/a5f079a000.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="navBar">
+      <a href="#" class="nav__logo">
+        <i class="fa-solid fa-cat logo__icon"></i>
+        <h1 class="logo__title">ByteNana</h1>
+      </a>
+      <ul class="nav__menu">
+        <li class="menu__items">
+          <a href="#" class="items__link">Description</a>
+        </li>
+        <li class="menu__items"><a href="#" class="items__link">Work</a></li>
+        <li class="menu__items">
+          <a href="#" class="items__link">Project</a>
+        </li>
+        <li class="menu__items"><a href="#" class="items__link">Link</a></li>
+      </ul>
+      <button class="toggleBtn">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </nav>
+
+    <ul class="nav__submenu">
+      <li class="submenu__row">first item</li>
+      <li class="submenu__row">second item</li>
+      <li class="submenu__row">thrid item</li>
+      <li class="submenu__row">fourth item</li>
+      <li class="submenu__row">fifth item</li>
+      <li class="submenu__row">sixth item</li>
+    </ul>
+
+    <script>
+      const submenu = document.querySelector('.nav__submenu');
+      const toggleBtn = document.querySelector('.toggleBtn');
+
+      toggleBtn.addEventListener('click', () => {
+        submenu.classList.toggle('visible');
+      });
+    </script>
+  </body>
+</html>

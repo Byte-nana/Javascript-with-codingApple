@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal</title>
+    <link rel="stylesheet" href="/basic/Simple UI/4.modal.css" />
+    <script
+      src="https://kit.fontawesome.com/a5f079a000.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <button type="button" class="modalOpen">Login</button>
+    <div class="modalBg">
+      <section class="modalBox">
+        <button class="modalClose">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <form action="#" id="modal__loginForm">
+          <h3 class="login__title">Welcome Back</h3>
+          <p class="login__name">
+            Enter your email and password to access your account
+          </p>
+
+          <label for="login__id" class="login__label">Email</label>
+          <input
+            type="text"
+            id="login__id"
+            class="login__input"
+            placeholder="nanabyte@example.com"
+          />
+
+          <label for="login__password" class="login__label">Password</label>
+          <input type="password" id="login__password" class="login__input" />
+
+          <div class="form__footer">
+            <input type="checkbox" id="login__checkbox" />
+            <label for="login__checkbox" class="checkbox__label"
+              >Remember Me</label
+            >
+            <a href="#" class="login__forgetLink">Forgot your Password?</a>
+          </div>
+          <button type="submit" class="signBtn">Sing in</button>
+        </form>
+      </section>
+    </div>
+  </body>
+
+  <script>
+    const modal = document.querySelector('.modalBg');
+    const modalOpen = document.querySelector('.modalOpen');
+    const form = document.querySelector('#modal__loginForm');
+    const id = document.querySelector('#login__id');
+    const pw = document.querySelector('#login__password');
+    const modalClose = document.querySelector('.modalClose');
+
+    modalOpen.addEventListener('click', () => {
+      modal.classList.add('showModal');
+    });
+
+    modalClose.addEventListener('click', () => {
+      modal.classList.remove('showModal');
+    });
+
+    form.addEventListener('submit', () => {
+      if (id.value.trim() === '' && pw.value.trim() === '') {
+        alert('Please enter your ID & password');
+      } else if (pw.value.length < 6) {
+        alert('Put more than 6 digits of password');
+      } else {
+        alert('Login Success!');
+      }
+    });
+  </script>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alert UI</title>
+    <link rel="stylesheet" href="/basic/Simple UI/1.alert.css" />
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/a5f079a000.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="alertBox">
+        <span class="alertText"
+          ><span class="strongAlertText">Holy guacamole!</span> you should check
+          in on some of those field below</span
+        >
+        <button class="deleteAlertBtn btn">
+          <i class="fa-solid fa-x"></i>
+        </button>
+      </div>
+    </div>
+
+    <button class="showAlertBtn btn">Show</button>
+
+    <script>
+      const showBtn = document.querySelector('.showAlertBtn');
+      const container = document.querySelector('.container');
+
+      function onClick(status) {
+        container.style.display = status;
+      }
+
+      showBtn.addEventListener('click', () => {
+        // container.style.display = 'block';
+        onClick('block');
+      });
+
+      container.addEventListener('click', (e) => {
+        if (e.target.closest('.deleteAlertBtn')) {
+          // container.style.display = 'none';
+          onClick('none');
+        }
+      });
+    </script>
+  </body>
+</html>
