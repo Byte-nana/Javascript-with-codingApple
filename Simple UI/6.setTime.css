@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+.imgBox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+.countText {
+  position: absolute;
+  left: 50%;
+  font-family: 'Cherry Bomb One';
+  font-size: 5.75rem;
+  color: #5c2dd5;
+  margin: 0;
+}
+.darkText {
+  font-family: 'Poppins';
+  font-size: 4rem;
+
+  color: #f5f5fa;
+}
+.img__cat {
+  display: block;
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,40 @@
+/* dark mode is default setting */
+
+body {
+  background-color: #0e1015;
+  color: #e8ecf4;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn {
+  display: block;
+  margin: auto;
+  padding: 16px 24px;
+  font-size: 24px;
+  border-radius: 32px;
+}
+/* dark */
+.darkToggle {
+  background-color: #8b63ff;
+  color: #e8ecf4;
+}
+.darkIcon {
+  color: #ffcd38;
+}
+/* light */
+.lightBg {
+  background-color: #e8ecf4;
+  color: #0e1015;
+}
+/* light */
+.lightToggle {
+  background-color: #39a9ff;
+}
+.lightIcon {
+  color: #ff5739;
+}
