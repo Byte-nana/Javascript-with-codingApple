@@ -63,11 +63,20 @@
       modal.classList.remove('showModal');
     });
 
-    form.addEventListener('submit', () => {
-      if (id.value.trim() === '' && pw.value.trim() === '') {
+    const emailRegex = /\S+@\S+\.\S+/;
+    form.addEventListener('submit', (e) => {
+      const testId = id.value.trim();
+      const testPw = pw.value.trim();
+
+      e.preventDefault();
+      if (testId === '' && testPw === '') {
         alert('Please enter your ID & password');
-      } else if (pw.value.length < 6) {
+      } else if (!emailRegex.test(testId)) {
+        alert('Please enter an ID in the correct format');
+      } else if (testPw.length < 6) {
         alert('Put more than 6 digits of password');
+      } else if (!/[A - Z]/.test(testPw)) {
+        alert('Include at least one capital letter');
       } else {
         alert('Login Success!');
       }
