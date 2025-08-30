@@ -8,6 +8,7 @@
 }
 body {
   background: linear-gradient(#ece3f0, #d3bbdd);
+  height: 3000px;
 }
 ul {
   list-style: none;
@@ -25,13 +26,19 @@ button {
 }
 .navBar {
   display: flex;
-  position: relative;
+  position: sticky;
+  top: 0;
+  left: 0;
   align-items: center;
   gap: 50px;
-  margin: 10px;
-  padding: 10px;
+  padding: 15px 20px;
   border-bottom: 2px solid #f8c0c8;
   color: #050a30;
+  z-index: 20;
+  transition: all 300ms ease;
+}
+.scroll__navBar {
+  background: #f8c0c8;
 }
 .nav__logo {
   display: flex;
@@ -48,10 +55,12 @@ button {
 .menu__items {
   font-size: 18px;
 }
+.items__link {
+  padding: 8px 6px;
+}
 .items__link:hover {
   background-color: #f8c0c8;
   border-radius: 10px;
-  padding: 8px 6px;
 }
 .toggleBtn {
   position: absolute;
@@ -61,12 +70,22 @@ button {
 .toggleBtn:hover {
   transform: scale(1.1);
 }
-
+.progressBar {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  height: 5px;
+  background: #050a30;
+  transform: translateY(-2px);
+  z-index: 20;
+  transition: all 300ms ease;
+}
 .nav__submenu {
   height: 0px;
   visibility: hidden;
-  position: absolute;
+  position: fixed;
   right: 20px;
+  margin-top: 10px;
   font-size: 18px;
   overflow: hidden;
   transition: all 300ms ease;
@@ -98,6 +117,7 @@ button {
   padding: 32px;
   background: #ece3f0;
   border-radius: 14px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 .toc__update {
   background: #d3bbdd;
@@ -107,9 +127,9 @@ button {
   margin: 16px 0 24px;
 }
 .toc__box {
-  height: 100%;
+  height: 360px;
   padding-right: 8px;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   overflow-y: scroll;
   scrollbar-width: thin;
 }
@@ -148,11 +168,14 @@ button {
   font-size: 1rem;
   margin: 8px 0 0 73px;
 }
+/*  */
 .btns__box {
   display: flex;
   justify-content: center;
   gap: 24px;
+  transition: all 300ms ease;
 }
+.btn__read,
 .btn__decline,
 .btn__accept {
   font-size: 1rem;
@@ -160,9 +183,19 @@ button {
   padding: 8px 16px;
   width: fit-content;
 }
+.btn__read {
+  background: #d3bbdd;
+  font-weight: 600;
+}
 .btn__decline {
   background: #f8c0c8;
 }
+.btn__decline:hover {
+  outline: 2px solid #f582a8;
+}
 .btn__accept {
   background: #d3bbdd;
+}
+.btn__accept:hover {
+  outline: 2px solid #a06ab4;
 }
