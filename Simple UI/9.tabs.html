@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Linking Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Linking fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/a5f079a000.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Linking CSS -->
+    <link rel="stylesheet" href="./9.tabs.css" />
+    <!-- Linking JS -->
+    <script src="./9.tabs.js" defer></script>
+    <title>Taps</title>
+  </head>
+  <body>
+    <aside class="btns">
+      <button class="subscriptionBtn" data-id="basci">Basic</button>
+      <button class="subscriptionBtn" data-id="smart">Smart</button>
+      <button class="subscriptionBtn" data-id="pro">Pro</button>
+    </aside>
+
+    <ul class="boxes">
+      <li class="subscriptionBox basic" data-id="basci">
+        <h2 class="box__title">Basic</h2>
+        <p class="box__price"><span class="price__accent">£10</span> /month</p>
+        <ul class="box__features">
+          <li class="box__item">
+            <i class="fa-solid fa-check"></i> Unlimited Calls
+          </li>
+          <li class="box__item">
+            <i class="fa-solid fa-check"></i> Free Hosting
+          </li>
+          <li class="box__item">
+            <i class="fa-solid fa-check"></i> 500GB Storage
+          </li>
+          <li class="box__item">
+            <i class="fa-solid fa-check"></i> 24/7 support
+          </li>
+        </ul>
+        <button class="box__button">Choose Plan</button>
+      </li>
+
+      <li class="subscriptionBox smart" data-id="smart">
+        <h2 class="box__title">Smart</h2>
+        <p class="box__price"><span class="price__accent">£30</span> /month</p>
+        <ul class="box__features">
+          <li class="box__item">
+            <i class="fa-solid fa-check"></i> Unlimited Calls
+          </li>
+          <li class="box__item">
+            <i class="fa-solid fa-check"></i> Free Hosting
+          </li>
+          <li class="box__item">
+            <i class="fa-solid fa-check"></i> 500GB Storage
+          </li>
+          <li class="box__item">
+            <i class="fa-solid fa-check"></i> 24/7 support
+          </li>
+        </ul>
+        <button class="box__button">Choose Plan</button>
+      </li>
+
+      <li class="subscriptionBox pro" data-id="pro">
+        <h2 class="box__title">Pro</h2>
+        <p class="box__price"><span class="price__accent">£100</span> /month</p>
+        <ul class="box__features">
+          <li class="box__item">
+            <i class="fa-solid fa-check"></i> Unlimited Calls
+          </li>
+          <li class="box__item">
+            <i class="fa-solid fa-check"></i> Free Hosting
+          </li>
+          <li class="box__item">
+            <i class="fa-solid fa-check"></i> 500GB Storage
+          </li>
+          <li class="box__item">
+            <i class="fa-solid fa-check"></i> 24/7 support
+          </li>
+        </ul>
+        <button class="box__button">Choose Plan</button>
+      </li>
+    </ul>
+  </body>
+</html>
